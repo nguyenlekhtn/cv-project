@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import Form from "./components/Form";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      fullName: "",
+      email: "",
+      phoneNumber: "",
+      schoolName: "",
+      titleOfStudy: "",
+      dateOfStudy: "",
+      company: "",
+      position: "",
+      mainTask: "",
+      dateStart: "",
+      dateEnd: "",
+    };
+  }
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  getData = (arr) => {
+    const generalData = {};
+    arr.forEach((item) => (generalData[item] = this.state[item]));
+    return generalData;
+  };
+
+  render() {
+    // const generalData = this.getData(["fullName", "email", "phoneNumber"]);
+    return (
+      <div>
+        <Form />
+      </div>
+    );
+  }
 }
 
 export default App;
