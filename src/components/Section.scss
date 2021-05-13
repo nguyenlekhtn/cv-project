@@ -1,0 +1,22 @@
+@use '../variables' as v;
+
+.section {
+  border-bottom: solid 1px v.$gray;
+  padding-bottom: 20px;
+
+  & > &_title {
+    line-height: 1.5em;
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      height: 3px;
+      background: v.$gray;
+      width: 72px;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.DisplayField {
+  &.main {
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: 400;
+  }
+
+  .field_title {
+    margin: 0em;
+  }
+
+  &.sub {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,28 @@
+@use '../variables' as v;
+
+.ModeController {
+  display: flex;
+  margin-top: 20px;
+
+  & > .button {
+    border: none;
+    background-color: #fff;
+    padding: 0.7em 1em;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+
+    &:first-child {
+      border-radius: 5px 0px 0px 5px;
+    }
+
+    &:last-child {
+      border-radius: 0px 5px 5px 0px;
+    }
+
+    &.active {
+      background-color: v.$green;
+      color: #fff;
+    }
+  }
+}

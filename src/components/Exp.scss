@@ -1,0 +1,38 @@
+@use '../variables' as v;
+@use "sass:color";
+
+.Exp {
+  display: flex;
+  justify-content: space-between;
+  border-left: solid 2px v.$gray;
+  padding: 1em;
+  line-height: 1.5em;
+  background-color: white;
+  margin-bottom: 10px;
+
+  .iconCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .iconBtn {
+    border: none;
+    outline: none;
+    height: 2em;
+    width: 2em;
+    background-color: v.$gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: color.scale(v.$gray, $lightness: -20%);
+    }
+
+    &:focus {
+      background-color: color.scale(v.$gray, $lightness: -40%);
+    }
+  }
+}

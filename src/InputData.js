@@ -1,6 +1,11 @@
 const InputData = [
   {
-    title: "fullName",
+    title: "firstName",
+    type: "text",
+    description: "Name",
+  },
+  {
+    title: "lastName",
     type: "text",
     description: "Name",
   },
@@ -12,17 +17,17 @@ const InputData = [
   {
     title: "phoneNumber",
     type: "phone",
-    description: "Phone number",
+    description: "Phone",
   },
   {
-    title: "schoolName",
+    title: "university",
     type: "text",
     description: "School name",
   },
   {
-    title: "titleOfStudy",
+    title: "major",
     type: "text",
-    description: "Title of study",
+    description: "Major",
   },
   {
     title: "studyStart",
@@ -40,7 +45,7 @@ const InputData = [
     description: "Company name",
   },
   {
-    title: "postion",
+    title: "position",
     type: "text",
     description: "Position",
   },
