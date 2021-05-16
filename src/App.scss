@@ -32,3 +32,42 @@
     }
   }
 }
+
+.Main {
+  display: flex;
+  justify-content: space-between;
+
+  &_right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    input {
+      max-width: 200px;
+    }
+  }
+
+  &_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & > input {
+      font-size: 2em;
+      max-width: 400px;
+    }
+  }
+
+  .subCtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2px;
+    align-items: center;
+
+    & > .material-icons {
+      font-size: 0.9em;
+      margin-right: 2px;
+    }
+  }
+}

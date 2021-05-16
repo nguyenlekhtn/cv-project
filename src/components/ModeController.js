@@ -7,9 +7,9 @@ export default function ModeController(props) {
 
   const handleClick = (button) => {
     if (button === "preview" && inInEditMode) {
-      props.setMode("preview");
+      props.setIsInEditMode(false);
     } else if (button === "edit" && !inInEditMode) {
-      props.setMode("edit");
+      props.setIsInEditMode(true);
     }
   };
 

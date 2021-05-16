@@ -3,7 +3,7 @@ import "./DisplayField.scss";
 export default function DisplayField(props) {
   const handleFocus = () => {
     if (props.isInEditMode) {
-      props.toggleDisplay(props.fieldName);
+      props.toggleDisplay();
     }
   };
   let display;

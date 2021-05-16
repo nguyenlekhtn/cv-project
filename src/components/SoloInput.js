@@ -1,39 +1,23 @@
-import { Component } from "react";
-
-export default class SoloInput extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: "",
-    };
-  }
-
-  handleChange = (event) => {
-    this.setState({ value: event.target.value });
-    this.props.changeSingleState(this.props.data.title, event.target.value);
-  };
-
-  handleKeyPress = (event) => {
+export default function SoloInput(props) {
+  const handleKeyPress = (event) => {
     const key = event.key;
     if (key === "Enter") {
-      this.props.toggleDisplay(this.props.data.title);
+      props.toggleDisplay();
     }
   };
 
-  render() {
-    const { type, title } = this.props.data;
+  const { type, title } = props.data;
 
-    return (
-      <input
-        autoFocus={true}
-        tabIndex="0"
-        type={type}
-        name={title}
-        value={this.state.value}
-        onChange={this.handleChange}
-        onKeyPress={this.handleKeyPress}
-        onBlur={() => this.props.toggleDisplay(this.props.data.title)}
-      ></input>
-    );
-  }
+  return (
+    <input
+      autoFocus={true}
+      tabIndex="0"
+      type={type}
+      name={title}
+      value={props.value}
+      onChange={props.handleChange}
+      onKeyPress={handleKeyPress}
+      onBlur={() => props.toggleDisplay()}
+    ></input>
+  );
 }
